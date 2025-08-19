@@ -1,5 +1,6 @@
 extends Area2D
 
-func _body(body):
-	print("+1 coin!")
+# warning-ignore:unused_argument
+func _on_body_entered(body):
+	print("+1 petisco")
 	queue_free()
