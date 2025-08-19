@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dogo Adventures"
-run/main_scene="uid://0xtbgpp23n2c"
+run/main_scene="uid://2rbg8tpre36h"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
