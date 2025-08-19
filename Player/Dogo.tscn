@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bf12au13kdwjv" path="res://Sprites/Dogo/dogo2.png" id="2_bmcgm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtvkv"]
-size = Vector2(25, 18)
+size = Vector2(26, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vtb2g"]
 atlas = ExtResource("1_j42uk")
@@ -34,7 +34,7 @@ collision_layer = 2
 script = ExtResource("1_bmcgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 1)
+position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_mtvkv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

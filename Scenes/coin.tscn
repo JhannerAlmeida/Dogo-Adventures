@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://81lcc4f0ul0j" path="res://Scripts/coin.gd" id="1_jgi06"]
 [ext_resource type="Texture2D" uid="uid://dmgk2tj3eygie" path="res://Petisco.png" id="2_jgi06"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g537i"]
-atlas = ExtResource("2_jgi06")
-region = Rect2(0, 0, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2p6v"]
 atlas = ExtResource("2_jgi06")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g537i"]
+atlas = ExtResource("2_jgi06")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ffmqm"]
 atlas = ExtResource("2_jgi06")
@@ -23,10 +23,10 @@ region = Rect2(48, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g537i")
+"texture": SubResource("AtlasTexture_h2p6v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2p6v")
+"texture": SubResource("AtlasTexture_g537i")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ffmqm")
@@ -39,8 +39,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m55n1"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgi06"]
+size = Vector2(14, 8)
 
 [node name="Area2D" type="Area2D"]
 collision_mask = 2
@@ -50,6 +50,11 @@ script = ExtResource("1_jgi06")
 sprite_frames = SubResource("SpriteFrames_qtgto")
 animation = &"petisco"
 autoplay = "petisco"
+frame = 2
+frame_progress = 0.73797
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_m55n1")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_jgi06")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
