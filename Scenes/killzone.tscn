@@ -1,14 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvn56ojxugi2k"]
+[gd_scene load_steps=2 format=3 uid="uid://bvn56ojxugi2k"]
 
 [ext_resource type="Script" uid="uid://ceykj4b8kma6j" path="res://Scripts/killzone.gd" id="1_jvagm"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jvagm"]
-
 [node name="Killzone" type="Area2D"]
 script = ExtResource("1_jvagm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("WorldBoundaryShape2D_jvagm")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.6

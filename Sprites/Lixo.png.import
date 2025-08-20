@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmgk2tj3eygie"
-path="res://.godot/imported/Petisco.png-af4040213f6e0a5162d0aec067bd4eb9.ctex"
+uid="uid://6587d3an7vo8"
+path="res://.godot/imported/Lixo.png-e991507b8b0d2829edf72ce2f55e9545.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Petisco.png"
-dest_files=["res://.godot/imported/Petisco.png-af4040213f6e0a5162d0aec067bd4eb9.ctex"]
+source_file="res://Sprites/Lixo.png"
+dest_files=["res://.godot/imported/Lixo.png-e991507b8b0d2829edf72ce2f55e9545.ctex"]
 
 [params]
 

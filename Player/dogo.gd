@@ -2,14 +2,13 @@ extends CharacterBody2D
 
 
 const SPEED = 260.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -280.0
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("resart"):
 		get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
