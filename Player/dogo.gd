@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 250.0
+const SPEED = 260.0
 const JUMP_VELOCITY = -300.0
 
 func _input(event: InputEvent) -> void:
