@@ -972,7 +972,8 @@ _data = {
 &"new_animation": SubResource("Animation_vqnaq")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rljl1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06jdw"]
+size = Vector2(3109, 47)
 
 [node name="World" type="Node2D"]
 
@@ -1024,8 +1025,13 @@ position = Vector2(1103, 283)
 position = Vector2(1581, 350)
 
 [node name="Killzone" parent="." instance=ExtResource("8_rljl1")]
-position = Vector2(8, 542)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(11, 544)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_rljl1")
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1435.5, -13.5)
+shape = SubResource("RectangleShape2D_06jdw")
 debug_color = Color(0, 0.713726, 0.701961, 0.419608)
