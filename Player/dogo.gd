@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 260.0
-const JUMP_VELOCITY = -280.0
+const JUMP_VELOCITY = -270.0
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("resart"):
