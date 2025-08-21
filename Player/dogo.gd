@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -270.0
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("resart"):
 		get_tree().reload_current_scene()
+	if event.is_action_pressed("exit"):
+		get_tree().quit()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
