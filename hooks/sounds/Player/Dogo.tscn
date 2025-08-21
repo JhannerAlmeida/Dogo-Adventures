@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmsav2v8dqger"]
+
+[ext_resource type="Script" uid="uid://q5t58wxoemum" path="res://Player/dogo.gd" id="1_bmcgm"]
+[ext_resource type="Texture2D" uid="uid://bejk8hma6lfnd" path="res://Sprites/Dogo/dogo1.png" id="1_j42uk"]
+[ext_resource type="Texture2D" uid="uid://bf12au13kdwjv" path="res://Sprites/Dogo/dogo2.png" id="2_bmcgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtvkv"]
+size = Vector2(26, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtb2g"]
+atlas = ExtResource("1_j42uk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2jan"]
+atlas = ExtResource("2_bmcgm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8blyj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtb2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2jan")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_bmcgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_mtvkv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8blyj")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.999829
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)
+limit_smoothed = true
