@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmsav2v8dqger"]
+[gd_scene load_steps=10 format=3 uid="uid://bmsav2v8dqger"]
 
 [ext_resource type="Script" uid="uid://q5t58wxoemum" path="res://Player/dogo.gd" id="1_bmcgm"]
 [ext_resource type="Texture2D" uid="uid://bejk8hma6lfnd" path="res://Sprites/Dogo/dogo1.png" id="1_j42uk"]
 [ext_resource type="Texture2D" uid="uid://bf12au13kdwjv" path="res://Sprites/Dogo/dogo2.png" id="2_bmcgm"]
+[ext_resource type="Texture2D" uid="uid://d3ohn73xjfess" path="res://Sprites/Dogo/dogo_walk1.png" id="4_67lms"]
+[ext_resource type="Texture2D" uid="uid://deu31r5oy3bvv" path="res://Sprites/Dogo/dogo_walk2.png" id="5_lrxxd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtvkv"]
 size = Vector2(26, 18)
@@ -26,6 +28,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_67lms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lrxxd")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -42,9 +55,9 @@ shape = SubResource("RectangleShape2D_mtvkv")
 sprite_frames = SubResource("SpriteFrames_8blyj")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.999829
+frame_progress = 0.469765
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
-limit_bottom = 625
+limit_bottom = 610
 limit_smoothed = true
