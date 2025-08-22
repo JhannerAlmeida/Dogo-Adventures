@@ -17,8 +17,6 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=480
 window/vsync/vsync_mode=0
 mouse_cursor/custom_image="uid://bfjfdatmji2x1"
 
@@ -38,7 +36,5 @@ exit={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
-anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_2d=2
 anti_aliasing/quality/msaa_3d=1

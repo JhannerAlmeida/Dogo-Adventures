@@ -1,11 +1,19 @@
 extends CharacterBody2D
 
-const SPEED = 150
-var direction := -1
+const SPEED = 60
 
+var direction = 1
 
-func _physics_process(delta: float) -> void:
+@onready  var ray_cast_left = $RayCastLeft
+@onready var ray_cast_right = $RayCastRight
+@onready var sprite = $Sprite2D
+
+func _process(delta: float) -> void:
+	if ray_cast_right.is_colliding():
+		direction = -1
+		sprite.flip_h = false
+	if ray_cast_left.is_colliding():
+		direction = 1
+		sprite.flip_h = true
 	
-	velocity.x = direction * SPEED
-
-	move_and_slide()
+	position.x += direction * SPEED * delta

@@ -1,20 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1p4l4ha53iu"]
 
-[ext_resource type="Texture2D" uid="uid://bpgufn1ocjauy" path="res://Sprites/Inimigo.png" id="1_1f0kj"]
-[ext_resource type="Script" uid="uid://q5ulcjot5mei" path="res://Scripts/enemy.gd" id="1_afpow"]
-[ext_resource type="PackedScene" uid="uid://bvn56ojxugi2k" path="res://Scenes/killzone.tscn" id="2_afpow"]
+[ext_resource type="Script" uid="uid://dty42d8hfeaky" path="res://Scripts/pombo_attack.gd" id="1_afpow"]
+[ext_resource type="Texture2D" uid="uid://3l4j1ttrhw2m" path="res://Sprites/Pombo-Attack.png" id="2_287tu"]
+[ext_resource type="PackedScene" uid="uid://bvn56ojxugi2k" path="res://Scenes/killzone.tscn" id="3_0830c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
-size = Vector2(14, 29)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghaa6"]
+size = Vector2(17, 21)
 
 [node name="Enemy" type="Node2D"]
+
+[node name="Pombo-Attack" type="CharacterBody2D" parent="."]
 script = ExtResource("1_afpow")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_1f0kj")
+[node name="Sprite2D" type="Sprite2D" parent="Pombo-Attack"]
+position = Vector2(0, -4)
+texture = ExtResource("2_287tu")
 
-[node name="Killzone" parent="." instance=ExtResource("2_afpow")]
+[node name="Killzone" parent="Pombo-Attack" instance=ExtResource("3_0830c")]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_287tu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pombo-Attack/Killzone"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_ghaa6")
+
+[node name="RayCastRight" type="RayCast2D" parent="Pombo-Attack"]
+target_position = Vector2(15, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="Pombo-Attack"]
+target_position = Vector2(-14, 0)
