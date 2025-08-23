@@ -9,5 +9,5 @@ func _on_body_entered(body: Node2D) -> void:
 	timer.start()
 
 func _on_timer_timeout() -> void:
-	Engine.time_scale = 1.0
+	Engine.time_scale = 0.8
 	get_tree().reload_current_scene()

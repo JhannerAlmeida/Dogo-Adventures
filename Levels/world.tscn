@@ -1046,6 +1046,12 @@ position = Vector2(1581, 350)
 [node name="Area2D10" parent="Petisco" instance=ExtResource("6_x5oxt")]
 position = Vector2(1785, 359)
 
+[node name="Area2D11" parent="Petisco" instance=ExtResource("6_x5oxt")]
+position = Vector2(2465, 349)
+
+[node name="Area2D12" parent="Petisco" instance=ExtResource("6_x5oxt")]
+position = Vector2(2680, 351)
+
 [node name="Killzone" parent="." instance=ExtResource("8_rljl1")]
 light_mask = 3
 visibility_layer = 3
@@ -1061,7 +1067,7 @@ shape = SubResource("WorldBoundaryShape2D_rljl1")
 debug_color = Color(0, 0.713726, 0.701961, 0.419608)
 
 [node name="Enemy" parent="." instance=ExtResource("9_06jdw")]
-position = Vector2(454, 357)
+position = Vector2(538, 350)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -1081,9 +1087,3 @@ layout_mode = 2
 
 [node name="Area2D" parent="." instance=ExtResource("6_x5oxt")]
 position = Vector2(2353, 349)
-
-[node name="Area2D2" parent="." instance=ExtResource("6_x5oxt")]
-position = Vector2(2465, 349)
-
-[node name="Area2D3" parent="." instance=ExtResource("6_x5oxt")]
-position = Vector2(2680, 351)
