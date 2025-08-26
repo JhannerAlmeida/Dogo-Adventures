@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://25v8e5gen1rb" path="res://Sprites/rato.png" id="2_afpow"]
 [ext_resource type="PackedScene" uid="uid://bvn56ojxugi2k" path="res://Scenes/killzone.tscn" id="3_0830c"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
-radius = 7.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afpow"]
+size = Vector2(21, 13)
 
 [node name="Enemy" type="Node2D"]
 
@@ -14,19 +14,20 @@ script = ExtResource("1_afpow")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pombo-Attack"]
 texture = ExtResource("2_afpow")
+flip_h = true
 
 [node name="Killzone" parent="Pombo-Attack" instance=ExtResource("3_0830c")]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pombo-Attack/Killzone"]
-position = Vector2(0, 4)
-shape = SubResource("CircleShape2D_afpow")
+position = Vector2(-2.5, 6.5)
+shape = SubResource("RectangleShape2D_afpow")
 
 [node name="RayCastRight" type="RayCast2D" parent="Pombo-Attack"]
-position = Vector2(0, 4)
+position = Vector2(0, 7)
 target_position = Vector2(15, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="Pombo-Attack"]
-position = Vector2(0, 4)
-target_position = Vector2(-14, 0)
+position = Vector2(0, 7)
+target_position = Vector2(-19, 0)
