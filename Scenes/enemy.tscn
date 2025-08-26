@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1p4l4ha53iu"]
 
 [ext_resource type="Script" uid="uid://dty42d8hfeaky" path="res://Scripts/pombo_attack.gd" id="1_afpow"]
-[ext_resource type="Texture2D" uid="uid://3l4j1ttrhw2m" path="res://Sprites/Pombo-Attack.png" id="2_287tu"]
+[ext_resource type="Texture2D" uid="uid://25v8e5gen1rb" path="res://Sprites/rato.png" id="2_afpow"]
 [ext_resource type="PackedScene" uid="uid://bvn56ojxugi2k" path="res://Scenes/killzone.tscn" id="3_0830c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
@@ -13,7 +13,7 @@ radius = 7.0
 script = ExtResource("1_afpow")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pombo-Attack"]
-texture = ExtResource("2_287tu")
+texture = ExtResource("2_afpow")
 
 [node name="Killzone" parent="Pombo-Attack" instance=ExtResource("3_0830c")]
 collision_layer = 2
